@@ -1,0 +1,10 @@
+/* Custom styles for larger screens (monitor) */
+@media screen and (min-width: 2560px) {
+    .home {
+       background-image: url(./image/bg-image2.png);
+       background-position: top;
+    }
+}
+@media screen and (max-width: 1023px) {
+    
+  }
