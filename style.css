@@ -76,7 +76,7 @@ section {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-position: top;
+  background-position: center;
 }
 .home .home-content h4 {
   color: #ffffff;
