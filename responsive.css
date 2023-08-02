@@ -2,13 +2,13 @@
 @media screen and (min-width: 2560px) {
   .home {
     background-image: url(./image/bg-image2.png);
-    background-position: bottom;
+    background-position: top;
   }
 }
 @media (min-height: 1080px) {
   .home {
     background-image: url(./image/bg-image2.png);
-    background-position: bottom;
+    background-position: top;
   }
 }
 /* macbook */
