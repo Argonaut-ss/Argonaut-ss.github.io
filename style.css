@@ -37,9 +37,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* backdrop-filter: blur(10px);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2); */
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   z-index: 100;
+  transition: .3s;
+}
+/* navbar scroll  */
+.header.sticky {
+  background: transparent;
+  border-bottom: 0px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(0px);
+  
 }
 .logo {
   font-size: 2.5rem;
