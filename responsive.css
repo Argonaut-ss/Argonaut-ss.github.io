@@ -1,3 +1,9 @@
+:root {
+  --bg-color: #1b1b1b;
+  --second-bg-color: #333333;
+  --text-color: #ededed;
+  --main-color: #7e7e7e;
+}
 /* Custom styles for larger screens (monitor) */
 @media screen and (min-width: 2560px) {
   .home {
@@ -11,6 +17,124 @@
     background-position: center;
   }
 }
-/* macbook */
-@media screen and (max-width: 1023px) {
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 991px) {
+  .header {
+    padding: 2rem 4%;
+  }
+  .section {
+    padding: 10rem 4% 2rem;  
+  }
+  .home {
+    padding: 0 4%;
+  }
+  .footer {
+    padding: 2rem 4%;
+  }
+}
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+  }
+  /* navbar trasition  */
+  /* background slide  */
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 100%;
+    padding: 1rem 4%;
+    background: var(--main-color);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    z-index: 1;
+    transition: .25s ease;
+    transition-delay: .25s;
+  }
+  .navbar.active {
+    left: 0;
+    transition-delay: 0s;
+  }
+  /* first background slide  */
+  .navbar .active-nav {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    border-top: .1rem solid rgba(0, 0, 0, .2);
+    z-index: -1;
+    transition: .25s ease;
+    transition-delay: 0s;
+  }
+  .navbar.active .active-nav {
+    left: 0;
+    transition-delay: .25s;
+  }
+  /* text slide  */
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    transform: translateX(-20rem);
+    transition: .25s ease;
+    transition-delay: 0s;
+  }
+  .navbar.active a{
+    transform: translateX(0);
+    transition-delay: .25s;
+  }
+}
+@media (max-width: 520px) {
+  html {
+    font-size: 50%;
+  }
+  .home-content h1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .home-sci {
+    width: 100px;
+  }
+  .home-sci a {
+    width: 38px;
+    height: 38px;
+  }
+}
+@media (max-width: 462px) {
+  .home-content h4 {
+    text-align: center;
+  }
+  .home-content h1 {
+    font-size: 4rem;
+    text-align: center;
+  }
+  .education {
+    padding: 10rem 4% 5rem;
+  }
+  .footer {
+    flex-direction: column-reverse;
+  }
+  .footer p {
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 371px) {
+  .home {
+    justify-content: center;
+  }
+  .home-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .home-content h1 {
+    font-size: 3.5rem;
+    margin-left: 35px;
+  }
 }
