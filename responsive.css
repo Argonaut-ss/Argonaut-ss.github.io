@@ -145,6 +145,9 @@
   }
 }
 @media (max-width: 320px) {
+  .navbar {
+    max-width: 315px;
+  }
   .home {
     justify-content: center;
   }
