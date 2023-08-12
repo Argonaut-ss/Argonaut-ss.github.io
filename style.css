@@ -40,21 +40,24 @@ body {
   backdrop-filter: blur(10px);
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   z-index: 100;
-  transition: .3s;
+  transition: 0.3s;
 }
 /* navbar scroll  */
 .header.sticky {
   background: transparent;
   border-bottom: 0px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(0px);
-  
 }
 .logo {
+  position: relative;
   font-size: 2.5rem;
   color: var(--main-color);
   font-weight: 600;
 }
 /* navbar */
+.navbar {
+  position: relative;
+}
 .navbar a {
   font-size: 1.7rem;
   color: var(--text-color);
@@ -66,6 +69,7 @@ body {
   color: var(--main-color);
 }
 #menu-icon {
+  position: relative;
   font-size: 3.6rem;
   color: var(--text-color);
   cursor: pointer;
@@ -102,10 +106,14 @@ section {
   max-width: 60rem;
 }
 .home-content h1 {
+  position: relative;
+  display: inline-block;
   font-size: 4.5rem;
   font-weight: 700;
   line-height: 1.3;
+  color: var(--text-color);
 }
+/* animated text  */
 .home-content .text-animate {
   position: relative;
   width: 55rem;
@@ -115,8 +123,31 @@ section {
   font-weight: 700;
   color: transparent;
   -webkit-text-stroke: 0.7px var(--main-color);
+  background-image: linear-gradient(var(--main-color), var(--main-color));
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-position: -55rem 0;
+}
+.home.show-animate .home-content .text-animate h3 {
+  animation: homeBgText 6s linear infinite;
+  animation-delay: 2s;
+}
+.home-content .text-animate h3::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-right: 2px solid var(--main-color);
+  z-index: 1;
+}
+.home.show-animate .home-content .text-animate h3::before {
+  animation: homeCursorText 6s linear infinite;
+  animation-delay: 2s;
 }
 .home-content p {
+  position: relative;
   font-size: 1.6rem;
   margin: 2rem 0 4rem;
 }
@@ -227,6 +258,7 @@ section {
   padding-bottom: 7rem;
 }
 .heading {
+  position: relative;
   font-size: 5rem;
   margin-bottom: 3rem;
   text-align: center;
@@ -248,6 +280,7 @@ span {
   border-radius: 50%;
   border: 0.2rem solid var(--main-color);
 }
+/* image animation  */
 .about-img .circle-spin {
   position: absolute;
   top: 50%;
@@ -260,6 +293,7 @@ span {
   border-bottom: 0.2rem solid var(--bg-color);
   border-left: 0.2rem solid var(--main-color);
   border-right: 0.2rem solid var(--main-color);
+  animation: aboutSpinner 8s linear infinite;
 }
 .about-content {
   display: flex;
@@ -268,9 +302,12 @@ span {
   flex-direction: column;
 }
 .about-content h3 {
+  position: relative;
+  display: inline-block;
   font-size: 2.6rem;
 }
 .about-content p {
+  position: relative;
   text-align: center;
   width: 70%;
   font-size: 1.6rem;
@@ -306,18 +343,21 @@ span {
   flex: 1 1 40rem;
 }
 .education-column .title {
+  position: relative;
+  display: inline-block;
   font-size: 2.5rem;
   margin: 0 0 2rem 2rem;
 }
 .education-column .education-box {
-  border-left: .2rem solid var(--main-color);
+  position: relative;
+  border-left: 0.2rem solid var(--main-color);
 }
 .education-box .education-content {
   position: relative;
   padding-left: 2rem;
 }
 .education-box .education-content::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -1.1rem;
@@ -329,13 +369,13 @@ span {
 .education-content .content {
   position: relative;
   padding: 1.5rem;
-  border: .2rem solid var(--main-color);
-  border-radius: .6rem;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 0.6rem;
   margin-bottom: 2rem;
   overflow: hidden;
 }
 .education-content .content::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -343,7 +383,7 @@ span {
   height: 100%;
   background: var(--second-bg-color);
   z-index: -1;
-  transition: .5s;
+  transition: 0.5s;
 }
 .education-content .content:hover::before {
   width: 100%;
@@ -351,17 +391,17 @@ span {
 .education-content .content .year {
   font-size: 1.5rem;
   color: var(--main-color);
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
 }
 .education-content .content .year i {
-  padding-right: .5rem;
+  padding-right: 0.5rem;
 }
 .education-content .content h3 {
   font-size: 2rem;
 }
 .education-content .content p {
   font-size: 1.6rem;
-  padding-top: .5rem;
+  padding-top: 0.5rem;
 }
 /* Skill Section  */
 .skills {
@@ -371,6 +411,11 @@ span {
   padding-bottom: 7rem;
   margin-left: 5rem;
   margin-right: 5rem;
+}
+.skills h2 {
+  display: inline-block;
+  left: 50%;
+  transform: translate(-50%);
 }
 .skills-row {
   display: flex;
@@ -382,19 +427,24 @@ span {
   flex: 1 1 40rem;
 }
 .skills-column .title {
+  position: relative;
+  display: inline-block;
   font-size: 2.5rem;
-  margin: 0 0 2rem 2rem; 
+  margin: 0 0 2rem 2rem;
+}
+.skills-column .skills-box {
+  position: relative;
 }
 .skills-box .skills-content {
   position: relative;
-  border: .2rem solid var(--main-color);
-  border-radius: .6rem;
-  padding: .5rem 1.5rem;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 0.6rem;
+  padding: 0.5rem 1.5rem;
   z-index: 1;
   overflow: hidden;
 }
 .skills-box .skills-content::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -402,7 +452,7 @@ span {
   height: 100%;
   background: var(--second-bg-color);
   z-index: -1;
-  transition: .5s;
+  transition: 0.5s;
 }
 .skills-box .skills-content:hover::before {
   width: 100%;
@@ -421,15 +471,15 @@ span {
 /* skill progress bar  */
 .skills-content .progress .bar {
   height: 2.5rem;
-  border-radius: .6rem;
-  border: .2rem solid var(--main-color);
-  padding: .5rem;
+  border-radius: 0.6rem;
+  border: 0.2rem solid var(--main-color);
+  padding: 0.5rem;
   margin: 1rem 0;
 }
 .skills-content .progress .bar span {
   display: block;
   height: 100%;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   background: var(--main-color);
 }
 /* coding skills bar */
@@ -484,6 +534,10 @@ span {
   padding: 2rem 9%;
   background: var(--second-bg-color);
 }
+.footer-text,
+.footer-icon-top {
+  position: relative;
+}
 .footer-text p {
   font-size: 1.6rem;
 }
@@ -492,15 +546,15 @@ span {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: .8rem;
+  padding: 0.8rem;
   background: var(--main-color);
-  border: .2rem solid var(--main-color);
-  border-radius: .6rem;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 0.6rem;
   z-index: 1;
   overflow: hidden;
 }
 .footer-icon-top a::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -508,7 +562,7 @@ span {
   height: 100%;
   background: var(--bg-color);
   z-index: -1;
-  transition: .5s;
+  transition: 0.5s;
 }
 .footer-icon-top a:hover::before {
   width: 100%;
@@ -516,8 +570,83 @@ span {
 .footer-icon-top a i {
   font-size: 2.4rem;
   color: var(--bg-color);
-  transition: .5s;
+  transition: 0.5s;
 }
 .footer-icon-top a:hover i {
   color: var(--main-color);
+}
+/* Animation reload and scroll  */
+.animate {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  z-index: 98;
+}
+.logo .animate,
+.navbar .animate,
+#menu-icon .animate,
+.home.show-animate .animate {
+  animation: showRight 1s ease forwards;
+  animation-delay: calc(0.3s * var(--i));
+}
+.animate.scroll {
+  transition: 1s ease;
+  transition-delay: calc(0.3s / var(--i));
+  animation: none;
+}
+section:nth-child(0) .animate.scroll {
+  background: var(--second-bg-color);
+}
+.education .education-box .animate.scroll{
+  width: 105%;
+}
+.about.show-animate .animate.scroll,
+.education.show-animate .animate.scroll,
+.skills.show-animate .animate.scroll,
+.footer.show-animate .animate.scroll {
+  transition-delay: calc(0.3s * var(--i));
+  width: 0;
+}
+
+/* KEYFRAME ANIMATION  */
+@keyframes homeBgText {
+  0%,
+  10%,
+  100% {
+    background-position: -55rem 0;
+  }
+  65%,
+  85% {
+    background-position: 0 0;
+  }
+}
+@keyframes homeCursorText {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  65%,
+  78%,
+  85% {
+    width: 100%;
+    opacity: 1;
+  }
+  75%,
+  81% {
+    opacity: 0;
+  }
+}
+@keyframes aboutSpinner {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes showRight {
+  100% {
+    width: 0;
+  }
 }
