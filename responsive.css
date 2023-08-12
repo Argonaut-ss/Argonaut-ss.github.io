@@ -106,8 +106,8 @@
   }
 }
 @media (max-width: 425px) {
-  .home {
-    background: var(--bg-color);
+  .navbar {
+    width: 100%;
   }
   .home-content h4 {
     text-align: center;
@@ -128,8 +128,10 @@
   }
 }
 @media (max-width: 375px) {
+  .navbar {
+    width: 100%;
+  }
   .home {
-    background: var(--bg-color);
     justify-content: center;
   }
   .home-content {
@@ -140,7 +142,6 @@
   }
   .home-content h1 {
     font-size: 3.5rem;
-    margin-left: 35px;
   }
 }
 @media (max-width: 320px) {
@@ -155,6 +156,5 @@
   }
   .home-content h1 {
     font-size: 3rem;
-    margin-left: 35px;
   }
 }
