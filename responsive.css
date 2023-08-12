@@ -106,6 +106,9 @@
   }
 }
 @media (max-width: 462px) {
+  .home {
+    background: var(--bg-color);
+  }
   .home-content h4 {
     text-align: center;
   }
@@ -121,10 +124,12 @@
   }
   .footer p {
     margin-top: 2rem;
+    text-align: center;
   }
 }
 @media (max-width: 371px) {
   .home {
+    background: var(--bg-color);
     justify-content: center;
   }
   .home-content {
