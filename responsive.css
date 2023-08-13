@@ -88,6 +88,12 @@
     transform: translateX(0);
     transition-delay: .25s;
   }
+  .projects h2 {
+    margin-bottom: 3rem;
+  }
+  .projects .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (max-width: 520px) {
   html {

@@ -48,3 +48,16 @@ window.onscroll = () => {
 
     footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
 }
+
+// scroll reveal 
+ScrollReveal({ 
+    reset: true,
+    distance: '80px',
+    duration: 2000,
+    delay: 200
+});
+
+ScrollReveal().reveal('.projects-content, .projects-heading', { origin: 'top' });
+ScrollReveal().reveal('.projects-box', { origin: 'bottom' });
+ScrollReveal().reveal('.home-content, .home-sci', { origin: 'left' });
+ScrollReveal({reset: false}).reveal('.navbar, .logo, .bx-menu ', { origin: 'right' });
