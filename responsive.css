@@ -35,6 +35,7 @@
   .footer {
     padding: 2rem 4%;
   }
+  
 }
 @media (max-width: 768px) {
   #menu-icon {
@@ -58,7 +59,7 @@
     left: 0;
     transition-delay: 0s;
   }
-  /* first background slide  */
+  /* first navbar background slide  */
   .navbar .active-nav {
     position: absolute;
     top: 0;
@@ -92,8 +93,9 @@
     margin-bottom: 3rem;
   }
   .projects .projects-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
+  
 }
 @media (max-width: 520px) {
   html {
@@ -148,6 +150,10 @@
   }
   .home-content h1 {
     font-size: 3.5rem;
+  }
+  .projects-container .projects-box  {
+    width: 100%;
+    height: 200px;
   }
 }
 @media (max-width: 320px) {
