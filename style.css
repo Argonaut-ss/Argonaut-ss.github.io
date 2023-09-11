@@ -208,7 +208,7 @@ section {
 .home-sci {
   position: absolute;
   bottom: 4rem;
-  width: 100px;
+  width: 150px;
   display: flex;
   justify-content: space-between;
 }
@@ -538,7 +538,7 @@ span {
   text-align: center;
 }
 .projects h2 {
-  margin-bottom: 4rem;
+  margin-bottom: 10rem;
 }
 .projects .projects-container {
   display: grid;
@@ -728,4 +728,15 @@ section:nth-child(0) .animate.scroll {
   100% {
     width: 0;
   }
+}
+
+/*---------Custom Scroll Bar-----------*/
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: white;
 }
