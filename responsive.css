@@ -176,6 +176,12 @@
     font-size: 2.2rem;
   }
   .home-content p {
-    max-width: 315px;
+    max-width: 300px;
+  }
+  .about-content h3 {
+    text-align: center;
+  }
+  .about-content p {
+    max-width: 300px;
   }
 }
